@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catalogo Maison Varga | Moda de Lujo Francesa</title>
+    <meta
+      name="description"
+      content="Explora el catalogo Maison Varga con calzado, camisas, pantalones y accesorios de lujo. Descubre 20 piezas premium de edicion limitada."
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="../css/tailwind.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ink: '#1d1916',
+              champagne: '#e8dac3',
+              linen: '#f7f3ec',
+              sand: '#d4c2a8',
+              graphite: '#3b352f'
+            }
+          }
+        }
+      };
+    </script>
+  </head>
+  <body class="text-ink">
+    <a href="#contenido" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:rounded focus:bg-graphite focus:px-4 focus:py-2 focus:text-white">Saltar al contenido</a>
+
+    <header class="border-b border-stone-300/60 bg-linen/90 backdrop-blur">
+      <div class="mx-auto flex w-full max-w-7xl items-center justify-between gap-3 px-4 py-4 sm:px-6 lg:px-8">
+        <a href="home.html" class="brand-serif text-3xl font-semibold tracking-wide">Maison Varga</a>
+        <form action="catalog.html" class="hidden flex-1 md:flex" role="search">
+          <label for="busqueda" class="sr-only">Buscar productos</label>
+          <input
+            id="busqueda"
+            name="q"
+            type="search"
+            placeholder="Buscar blazer, camisa, accesorios..."
+            class="w-full rounded-full border border-stone-300 bg-white px-5 py-2.5 text-sm placeholder:text-stone-500 focus-ring"
+          />
+        </form>
+        <nav aria-label="Cuenta de usuario" class="flex items-center gap-2 text-sm sm:gap-4">
+          <a href="checkout.html" class="rounded-full px-3 py-2 hover:bg-stone-200">Mi cuenta</a>
+          <a href="cart.html" class="rounded-full bg-graphite px-4 py-2 font-medium text-white hover:bg-black">Carrito</a>
+        </nav>
+      </div>
+      <nav aria-label="Menu principal" class="border-t border-stone-300/60">
+        <ul class="mx-auto flex w-full max-w-7xl flex-wrap items-center gap-x-6 gap-y-2 px-4 py-3 text-sm uppercase tracking-[0.16em] sm:px-6 lg:px-8">
+          <li><a href="catalog.html?category=calzado" class="hover:text-graphite">Calzado</a></li>
+          <li><a href="catalog.html?category=camisas" class="hover:text-graphite">Camisas</a></li>
+          <li><a href="catalog.html?category=pantalones" class="hover:text-graphite">Pantalones</a></li>
+          <li><a href="catalog.html?category=accesorios" class="hover:text-graphite">Accesorios</a></li>
+          <li><a href="catalog.html" class="hover:text-graphite">Catalogo</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="contenido" class="mx-auto w-full max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+      <section class="mb-6 rounded-3xl border border-stone-300 bg-white/80 p-5" aria-labelledby="filtros">
+        <div class="flex flex-wrap items-end gap-4">
+          <h1 id="filtros" class="mr-auto text-4xl">Catalogo completo</h1>
+          <div class="w-full sm:w-56">
+            <label for="categoryFilter" class="mb-2 block text-xs uppercase tracking-[0.16em] text-stone-600">Filtrar por categoria</label>
+            <select id="categoryFilter" class="w-full rounded-xl border border-stone-300 bg-white px-4 py-2.5 focus-ring">
+              <option value="all">Todas</option>
+              <option value="calzado">Calzado</option>
+              <option value="camisas">Camisas</option>
+              <option value="pantalones">Pantalones</option>
+              <option value="accesorios">Accesorios</option>
+            </select>
+          </div>
+          <div class="w-full sm:w-56">
+            <label for="sizeFilter" class="mb-2 block text-xs uppercase tracking-[0.16em] text-stone-600">Filtrar por talla</label>
+            <select id="sizeFilter" class="w-full rounded-xl border border-stone-300 bg-white px-4 py-2.5 focus-ring">
+              <option value="all">Todas</option>
+              <option value="S">S</option>
+              <option value="M">M</option>
+              <option value="L">L</option>
+              <option value="XL">XL</option>
+              <option value="40">40</option>
+              <option value="41">41</option>
+              <option value="42">42</option>
+            </select>
+          </div>
+        </div>
+        <p id="resultCount" class="mt-4 text-sm text-stone-700">Mostrando 20 productos.</p>
+      </section>
+
+      <section class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4" aria-label="Rejilla de productos" itemscope itemtype="https://schema.org/ItemList">
+        <meta itemprop="name" content="Catalogo Maison Varga" />
+
+        <article class="product-card rounded-2xl border border-stone-300 bg-white/85 p-4" data-category="camisas" data-size="S M L" itemscope itemprop="itemListElement" itemtype="https://schema.org/Product">
+          <img src="../img/product-02.svg" alt="Camisa seda Paris 75" class="h-56 w-full rounded-xl object-cover" itemprop="image" />
+          <h2 class="mt-3 text-lg font-semibold" itemprop="name">Camisa Seda Paris 75</h2>
+          <p class="text-sm text-stone-600" itemprop="sku">REF MV-CM-075</p>
+          <p class="mt-1 text-base font-medium" itemprop="offers" itemscope itemtype="https://schema.org/Offer"><span itemprop="priceCurrency" content="EUR">EUR</span> <span itemprop="price" content="290">290</span></p>
+          <a href="product.html?sku=MV-CM-075" class="mt-3 inline-block rounded-full bg-ink px-4 py-2 text-xs uppercase tracking-[0.14em] text-white">Ver detalles</a>
+        </article>
+
+        <article class="product-card rounded-2xl border border-stone-300 bg-white/85 p-4" data-category="camisas" data-size="M L XL" itemscope itemprop="itemListElement" itemtype="https://schema.org/Product">
+          <img src="../img/product-02.svg" alt="Camisa Blanche Atelier" class="h-56 w-full rounded-xl object-cover" itemprop="image" />
+          <h2 class="mt-3 text-lg font-semibold" itemprop="name">Camisa Blanche Atelier</h2>
+          <p class="text-sm text-stone-600" itemprop="sku">REF MV-CM-102</p>
+          <p class="mt-1 text-base font-medium" itemprop="offers" itemscope itemtype="https://schema.org/Offer"><span itemprop="priceCurrency" content="EUR">EUR</span> <span itemprop="price" content="310">310</span></p>
+          <a href="product.html?sku=MV-CM-102" class="mt-3 inline-block rounded-full bg-ink px-4 py-2 text-xs uppercase tracking-[0.14em] text-white">Ver detalles</a>
+        </article>
+
+        <article class="product-card rounded-2xl border border-stone-300 bg-white/85 p-4" data-category="camisas" data-size="S M" itemscope itemprop="itemListElement" itemtype="https://schema.org/Product">
+          <img src="../img/product-02.svg" alt="Camisa Marais Silk" class="h-56 w-full rounded-xl object-cover" itemprop="image" />
+          <h2 class="mt-3 text-lg font-semibold" itemprop="name">Camisa Marais Silk</h2>
+          <p class="text-sm text-stone-600" itemprop="sku">REF MV-CM-201</p>
+          <p class="mt-1 text-base font-medium" itemprop="offers" itemscope itemtype="https://schema.org/Offer"><span itemprop="priceCurrency" content="EUR">EUR</span> <span itemprop="price" content="335">335</span></p>
+          <a href="product.html?sku=MV-CM-201" class="mt-3 inline-block rounded-full bg-ink px-4 py-2 text-xs uppercase tracking-[0.14em] text-white">Ver detalles</a>
+        </article>
+
+        <article class="product-card rounded-2xl border border-stone-300 bg-white/85 p-4" data-category="camisas" data-size="L XL" itemscope itemprop="itemListElement" itemtype="https://schema.org/Product">
+          <img src="../img/product-02.svg" alt="Camisa Lune Beige" class="h-56 w-full rounded-xl object-cover" itemprop="image" />
+          <h2 class="mt-3 text-lg font-semibold" itemprop="name">Camisa Lune Beige</h2>
+          <p class="text-sm text-stone-600" itemprop="sku">REF MV-CM-322</p>
+          <p class="mt-1 text-base font-medium" itemprop="offers" itemscope itemtype="https://schema.org/Offer"><span itemprop="priceCurrency" content="EUR">EUR</span> <span itemprop="price" content="305">305</span></p>
+          <a href="product.html?sku=MV-CM-322" class="mt-3 inline-block rounded-full bg-ink px-4 py-2 text-xs uppercase tracking-[0.14em] text-white">Ver detalles</a>
+        </article>
+
+        <article class="product-card rounded-2xl border border-stone-300 bg-white/85 p-4" data-category="pantalones" data-size="S M L" itemscope itemprop="itemListElement" itemtype="https://schema.org/Product">
+          <img src="../img/product-03.svg" alt="Pantalon Atelier 24" class="h-56 w-full rounded-xl object-cover" itemprop="image" />
+          <h2 class="mt-3 text-lg font-semibold" itemprop="name">Pantalon Atelier 24</h2>
+          <p class="text-sm text-stone-600" itemprop="sku">REF MV-PT-024</p>
+          <p class="mt-1 text-base font-medium" itemprop="offers" itemscope itemtype="https://schema.org/Offer"><span itemprop="priceCurrency" content="EUR">EUR</span> <span itemprop="price" content="320">320</span></p>
+          <a href="product.html?sku=MV-PT-024" class="mt-3 inline-block rounded-full bg-ink px-4 py-2 text-xs uppercase tracking-[0.14em] text-white">Ver detalles</a>
+        </article>
+
+        <article class="product-card rounded-2xl border border-stone-300 bg-white/85 p-4" data-category="pantalones" data-size="M L XL" itemscope itemprop="itemListElement" itemtype="https://schema.org/Product">
+          <img src="../img/product-03.svg" alt="Pantalon Louvre Straight" class="h-56 w-full rounded-xl object-cover" itemprop="image" />
+          <h2 class="mt-3 text-lg font-semibold" itemprop="name">Pantalon Louvre Straight</h2>
+          <p class="text-sm text-stone-600" itemprop="sku">REF MV-PT-198</p>
+          <p class="mt-1 text-base font-medium" itemprop="offers" itemscope itemtype="https://schema.org/Offer"><span itemprop="priceCurrency" content="EUR">EUR</span> <span itemprop="price" content="350">350</span></p>
+          <a href="product.html?sku=MV-PT-198" class="mt-3 inline-block rounded-full bg-ink px-4 py-2 text-xs uppercase tracking-[0.14em] text-white">Ver detalles</a>
+        </article>
+
+        <article class="product-card rounded-2xl border border-stone-300 bg-white/85 p-4" data-category="pantalones" data-size="S M" itemscope itemprop="itemListElement" itemtype="https://schema.org/Product">
+          <img src="../img/product-03.svg" alt="Pantalon Nuit Wool" class="h-56 w-full rounded-xl object-cover" itemprop="image" />
+          <h2 class="mt-3 text-lg font-semibold" itemprop="name">Pantalon Nuit Wool</h2>
+          <p class="text-sm text-stone-600" itemprop="sku">REF MV-PT-260</p>
+          <p class="mt-1 text-base font-medium" itemprop="offers" itemscope itemtype="https://schema.org/Offer"><span itemprop="priceCurrency" content="EUR">EUR</span> <span itemprop="price" content="375">375</span></p>
+          <a href="product.html?sku=MV-PT-260" class="mt-3 inline-block rounded-full bg-ink px-4 py-2 text-xs uppercase tracking-[0.14em] text-white">Ver detalles</a>
+        </article>
+
+        <article class="product-card rounded-2xl border border-stone-300 bg-white/85 p-4" data-category="pantalones" data-size="L XL" itemscope itemprop="itemListElement" itemtype="https://schema.org/Product">
+          <img src="../img/product-03.svg" alt="Pantalon Riviera Pleat" class="h-56 w-full rounded-xl object-cover" itemprop="image" />
+          <h2 class="mt-3 text-lg font-semibold" itemprop="name">Pantalon Riviera Pleat</h2>
+          <p class="text-sm text-stone-600" itemprop="sku">REF MV-PT-311</p>
+          <p class="mt-1 text-base font-medium" itemprop="offers" itemscope itemtype="https://schema.org/Offer"><span itemprop="priceCurrency" content="EUR">EUR</span> <span itemprop="price" content="360">360</span></p>
+          <a href="product.html?sku=MV-PT-311" class="mt-3 inline-block rounded-full bg-ink px-4 py-2 text-xs uppercase tracking-[0.14em] text-white">Ver detalles</a>
+        </article>
+
+        <article class="product-card rounded-2xl border border-stone-300 bg-white/85 p-4" data-category="calzado" data-size="40 41 42" itemscope itemprop="itemListElement" itemtype="https://schema.org/Product">
+          <img src="../img/product-04.svg" alt="Derby Cuir Noble" class="h-56 w-full rounded-xl object-cover" itemprop="image" />
+          <h2 class="mt-3 text-lg font-semibold" itemprop="name">Derby Cuir Noble</h2>
+          <p class="text-sm text-stone-600" itemprop="sku">REF MV-CL-010</p>
+          <p class="mt-1 text-base font-medium" itemprop="offers" itemscope itemtype="https://schema.org/Offer"><span itemprop="priceCurrency" content="EUR">EUR</span> <span itemprop="price" content="540">540</span></p>
+          <a href="product.html?sku=MV-CL-010" class="mt-3 inline-block rounded-full bg-ink px-4 py-2 text-xs uppercase tracking-[0.14em] text-white">Ver detalles</a>
+        </article>
+
+        <article class="product-card rounded-2xl border border-stone-300 bg-white/85 p-4" data-category="calzado" data-size="41 42" itemscope itemprop="itemListElement" itemtype="https://schema.org/Product">
+          <img src="../img/product-04.svg" alt="Derby Heritage Noir" class="h-56 w-full rounded-xl object-cover" itemprop="image" />
+          <h2 class="mt-3 text-lg font-semibold" itemprop="name">Derby Heritage Noir</h2>
+          <p class="text-sm text-stone-600" itemprop="sku">REF MV-CL-055</p>
+          <p class="mt-1 text-base font-medium" itemprop="offers" itemscope itemtype="https://schema.org/Offer"><span itemprop="priceCurrency" content="EUR">EUR</span> <span itemprop="price" content="570">570</span></p>
+          <a href="product.html?sku=MV-CL-055" class="mt-3 inline-block rounded-full bg-ink px-4 py-2 text-xs uppercase tracking-[0.14em] text-white">Ver detalles</a>
+        </article>
+
+        <article class="product-card rounded-2xl border border-stone-300 bg-white/85 p-4" data-category="calzado" data-size="40 41" itemscope itemprop="itemListElement" itemtype="https://schema.org/Product">
+          <img src="../img/product-04.svg" alt="Mocasin Opera" class="h-56 w-full rounded-xl object-cover" itemprop="image" />
+          <h2 class="mt-3 text-lg font-semibold" itemprop="name">Mocasin Opera</h2>
+          <p class="text-sm text-stone-600" itemprop="sku">REF MV-CL-080</p>
+          <p class="mt-1 text-base font-medium" itemprop="offers" itemscope itemtype="https://schema.org/Offer"><span itemprop="priceCurrency" content="EUR">EUR</span> <span itemprop="price" content="510">510</span></p>
+          <a href="product.html?sku=MV-CL-080" class="mt-3 inline-block rounded-full bg-ink px-4 py-2 text-xs uppercase tracking-[0.14em] text-white">Ver detalles</a>
+        </article>
+
+        <article class="product-card rounded-2xl border border-stone-300 bg-white/85 p-4" data-category="calzado" data-size="42" itemscope itemprop="itemListElement" itemtype="https://schema.org/Product">
+          <img src="../img/product-04.svg" alt="Bota Jardin D'Hiver" class="h-56 w-full rounded-xl object-cover" itemprop="image" />
+          <h2 class="mt-3 text-lg font-semibold" itemprop="name">Bota Jardin D'Hiver</h2>
+          <p class="text-sm text-stone-600" itemprop="sku">REF MV-CL-122</p>
+          <p class="mt-1 text-base font-medium" itemprop="offers" itemscope itemtype="https://schema.org/Offer"><span itemprop="priceCurrency" content="EUR">EUR</span> <span itemprop="price" content="620">620</span></p>
+          <a href="product.html?sku=MV-CL-122" class="mt-3 inline-block rounded-full bg-ink px-4 py-2 text-xs uppercase tracking-[0.14em] text-white">Ver detalles</a>
+        </article>
+
+        <article class="product-card rounded-2xl border border-stone-300 bg-white/85 p-4" data-category="accesorios" data-size="M L" itemscope itemprop="itemListElement" itemtype="https://schema.org/Product">
+          <img src="../img/product-05.svg" alt="Bolso Maison Sac 32" class="h-56 w-full rounded-xl object-cover" itemprop="image" />
+          <h2 class="mt-3 text-lg font-semibold" itemprop="name">Bolso Maison Sac 32</h2>
+          <p class="text-sm text-stone-600" itemprop="sku">REF MV-AC-032</p>
+          <p class="mt-1 text-base font-medium" itemprop="offers" itemscope itemtype="https://schema.org/Offer"><span itemprop="priceCurrency" content="EUR">EUR</span> <span itemprop="price" content="610">610</span></p>
+          <a href="product.html?sku=MV-AC-032" class="mt-3 inline-block rounded-full bg-ink px-4 py-2 text-xs uppercase tracking-[0.14em] text-white">Ver detalles</a>
+        </article>
+
+        <article class="product-card rounded-2xl border border-stone-300 bg-white/85 p-4" data-category="accesorios" data-size="S M" itemscope itemprop="itemListElement" itemtype="https://schema.org/Product">
+          <img src="../img/product-05.svg" alt="Bolso Iconique 28" class="h-56 w-full rounded-xl object-cover" itemprop="image" />
+          <h2 class="mt-3 text-lg font-semibold" itemprop="name">Bolso Iconique 28</h2>
+          <p class="text-sm text-stone-600" itemprop="sku">REF MV-AC-028</p>
+          <p class="mt-1 text-base font-medium" itemprop="offers" itemscope itemtype="https://schema.org/Offer"><span itemprop="priceCurrency" content="EUR">EUR</span> <span itemprop="price" content="640">640</span></p>
+          <a href="product.html?sku=MV-AC-028" class="mt-3 inline-block rounded-full bg-ink px-4 py-2 text-xs uppercase tracking-[0.14em] text-white">Ver detalles</a>
+        </article>
+
+        <article class="product-card rounded-2xl border border-stone-300 bg-white/85 p-4" data-category="accesorios" data-size="L XL" itemscope itemprop="itemListElement" itemtype="https://schema.org/Product">
+          <img src="../img/product-05.svg" alt="Cinturon Saint Germain" class="h-56 w-full rounded-xl object-cover" itemprop="image" />
+          <h2 class="mt-3 text-lg font-semibold" itemprop="name">Cinturon Saint Germain</h2>
+          <p class="text-sm text-stone-600" itemprop="sku">REF MV-AC-219</p>
+          <p class="mt-1 text-base font-medium" itemprop="offers" itemscope itemtype="https://schema.org/Offer"><span itemprop="priceCurrency" content="EUR">EUR</span> <span itemprop="price" content="220">220</span></p>
+          <a href="product.html?sku=MV-AC-219" class="mt-3 inline-block rounded-full bg-ink px-4 py-2 text-xs uppercase tracking-[0.14em] text-white">Ver detalles</a>
+        </article>
+
+        <article class="product-card rounded-2xl border border-stone-300 bg-white/85 p-4" data-category="accesorios" data-size="S M L XL" itemscope itemprop="itemListElement" itemtype="https://schema.org/Product">
+          <img src="../img/product-05.svg" alt="Panuelo Riviera print" class="h-56 w-full rounded-xl object-cover" itemprop="image" />
+          <h2 class="mt-3 text-lg font-semibold" itemprop="name">Panuelo Riviera Print</h2>
+          <p class="text-sm text-stone-600" itemprop="sku">REF MV-AC-350</p>
+          <p class="mt-1 text-base font-medium" itemprop="offers" itemscope itemtype="https://schema.org/Offer"><span itemprop="priceCurrency" content="EUR">EUR</span> <span itemprop="price" content="180">180</span></p>
+          <a href="product.html?sku=MV-AC-350" class="mt-3 inline-block rounded-full bg-ink px-4 py-2 text-xs uppercase tracking-[0.14em] text-white">Ver detalles</a>
+        </article>
+
+        <article class="product-card rounded-2xl border border-stone-300 bg-white/85 p-4" data-category="camisas" data-size="M L" itemscope itemprop="itemListElement" itemtype="https://schema.org/Product">
+          <img src="../img/product-01.svg" alt="Blazer Marfil Riviera" class="h-56 w-full rounded-xl object-cover" itemprop="image" />
+          <h2 class="mt-3 text-lg font-semibold" itemprop="name">Blazer Marfil Riviera</h2>
+          <p class="text-sm text-stone-600" itemprop="sku">REF MV-BL-001</p>
+          <p class="mt-1 text-base font-medium" itemprop="offers" itemscope itemtype="https://schema.org/Offer"><span itemprop="priceCurrency" content="EUR">EUR</span> <span itemprop="price" content="460">460</span></p>
+          <a href="product.html?sku=MV-BL-001" class="mt-3 inline-block rounded-full bg-ink px-4 py-2 text-xs uppercase tracking-[0.14em] text-white">Ver detalles</a>
+        </article>
+
+        <article class="product-card rounded-2xl border border-stone-300 bg-white/85 p-4" data-category="camisas" data-size="L XL" itemscope itemprop="itemListElement" itemtype="https://schema.org/Product">
+          <img src="../img/product-01.svg" alt="Blazer Montmartre" class="h-56 w-full rounded-xl object-cover" itemprop="image" />
+          <h2 class="mt-3 text-lg font-semibold" itemprop="name">Blazer Montmartre</h2>
+          <p class="text-sm text-stone-600" itemprop="sku">REF MV-BL-040</p>
+          <p class="mt-1 text-base font-medium" itemprop="offers" itemscope itemtype="https://schema.org/Offer"><span itemprop="priceCurrency" content="EUR">EUR</span> <span itemprop="price" content="500">500</span></p>
+          <a href="product.html?sku=MV-BL-040" class="mt-3 inline-block rounded-full bg-ink px-4 py-2 text-xs uppercase tracking-[0.14em] text-white">Ver detalles</a>
+        </article>
+
+        <article class="product-card rounded-2xl border border-stone-300 bg-white/85 p-4" data-category="camisas" data-size="M L XL" itemscope itemprop="itemListElement" itemtype="https://schema.org/Product">
+          <img src="../img/product-06.svg" alt="Gabardina Atelier Premium" class="h-56 w-full rounded-xl object-cover" itemprop="image" />
+          <h2 class="mt-3 text-lg font-semibold" itemprop="name">Gabardina Atelier Premium</h2>
+          <p class="text-sm text-stone-600" itemprop="sku">REF MV-GB-058</p>
+          <p class="mt-1 text-base font-medium" itemprop="offers" itemscope itemtype="https://schema.org/Offer"><span itemprop="priceCurrency" content="EUR">EUR</span> <span itemprop="price" content="730">730</span></p>
+          <a href="product.html?sku=MV-GB-058" class="mt-3 inline-block rounded-full bg-ink px-4 py-2 text-xs uppercase tracking-[0.14em] text-white">Ver detalles</a>
+        </article>
+
+        <article class="product-card rounded-2xl border border-stone-300 bg-white/85 p-4" data-category="camisas" data-size="S M L" itemscope itemprop="itemListElement" itemtype="https://schema.org/Product">
+          <img src="../img/product-06.svg" alt="Gabardina Trench 1958" class="h-56 w-full rounded-xl object-cover" itemprop="image" />
+          <h2 class="mt-3 text-lg font-semibold" itemprop="name">Gabardina Trench 1958</h2>
+          <p class="text-sm text-stone-600" itemprop="sku">REF MV-GB-1958</p>
+          <p class="mt-1 text-base font-medium" itemprop="offers" itemscope itemtype="https://schema.org/Offer"><span itemprop="priceCurrency" content="EUR">EUR</span> <span itemprop="price" content="690">690</span></p>
+          <a href="product.html?sku=MV-GB-1958" class="mt-3 inline-block rounded-full bg-ink px-4 py-2 text-xs uppercase tracking-[0.14em] text-white">Ver detalles</a>
+        </article>
+      </section>
+    </main>
+
+    <footer class="border-t border-stone-300 bg-white/75">
+      <div class="mx-auto grid w-full max-w-7xl gap-8 px-4 py-10 sm:grid-cols-2 sm:px-6 lg:grid-cols-4 lg:px-8">
+        <section>
+          <h2 class="text-lg font-semibold">Categorias</h2>
+          <ul class="mt-3 space-y-2 text-sm text-stone-700">
+            <li><a href="catalog.html?category=calzado" class="hover:text-black">Calzado</a></li>
+            <li><a href="catalog.html?category=camisas" class="hover:text-black">Camisas</a></li>
+            <li><a href="catalog.html?category=pantalones" class="hover:text-black">Pantalones</a></li>
+            <li><a href="catalog.html?category=accesorios" class="hover:text-black">Accesorios</a></li>
+          </ul>
+        </section>
+        <section>
+          <h2 class="text-lg font-semibold">Legal</h2>
+          <ul class="mt-3 space-y-2 text-sm text-stone-700">
+            <li><a href="#" class="hover:text-black">Terminos y condiciones</a></li>
+            <li><a href="#" class="hover:text-black">Politica de privacidad</a></li>
+            <li><a href="#" class="hover:text-black">Sobre la marca</a></li>
+          </ul>
+        </section>
+        <section>
+          <h2 class="text-lg font-semibold">Contacto</h2>
+          <ul class="mt-3 space-y-2 text-sm text-stone-700">
+            <li>Maison Varga Paris</li>
+            <li>+33 1 45 00 18 30</li>
+            <li>concierge@maisonvarga.fr</li>
+          </ul>
+        </section>
+        <section>
+          <h2 class="text-lg font-semibold">Navegacion</h2>
+          <ul class="mt-3 space-y-2 text-sm text-stone-700">
+            <li><a href="home.html" class="hover:text-black">Home</a></li>
+            <li><a href="catalog.html" class="hover:text-black">Catalogo</a></li>
+            <li><a href="cart.html" class="hover:text-black">Carrito</a></li>
+            <li><a href="checkout.html" class="hover:text-black">Checkout</a></li>
+          </ul>
+        </section>
+      </div>
+      <p class="border-t border-stone-300 px-4 py-4 text-center text-xs uppercase tracking-[0.14em] text-stone-600 sm:px-6 lg:px-8">
+        2026 Maison Varga. Todos los derechos reservados.
+      </p>
+    </footer>
+
+    <script>
+      const categoryFilter = document.getElementById('categoryFilter');
+      const sizeFilter = document.getElementById('sizeFilter');
+      const products = document.querySelectorAll('.product-card');
+      const resultCount = document.getElementById('resultCount');
+
+      function applyFilters() {
+        const category = categoryFilter.value;
+        const size = sizeFilter.value;
+        let visible = 0;
+
+        products.forEach((product) => {
+          const productCategory = product.dataset.category;
+          const productSizes = product.dataset.size.split(' ');
+
+          const matchCategory = category === 'all' || productCategory === category;
+          const matchSize = size === 'all' || productSizes.includes(size);
+          const show = matchCategory && matchSize;
+
+          product.classList.toggle('hidden', !show);
+          if (show) visible += 1;
+        });
+
+        resultCount.textContent = `Mostrando ${visible} producto${visible === 1 ? '' : 's'}.`;
+      }
+
+      categoryFilter.addEventListener('change', applyFilters);
+      sizeFilter.addEventListener('change', applyFilters);
+
+      const params = new URLSearchParams(window.location.search);
+      const preselectedCategory = params.get('category');
+      if (preselectedCategory && categoryFilter.querySelector(`option[value="${preselectedCategory}"]`)) {
+        categoryFilter.value = preselectedCategory;
+        applyFilters();
+      }
+    </script>
+  </body>
+</html>
