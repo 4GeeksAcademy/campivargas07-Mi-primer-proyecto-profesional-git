@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000" role="img" aria-label="Bolso premium">
+  <defs>
+    <linearGradient id="g5" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#eadcc7"/>
+      <stop offset="1" stop-color="#aa8f6d"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#g5)"/>
+  <rect x="230" y="340" width="340" height="360" rx="46" fill="#fbf7f1" stroke="#6f6557" stroke-width="6"/>
+  <path d="M300 340 C300 250, 500 250, 500 340" fill="none" stroke="#6f6557" stroke-width="8"/>
+  <text x="50%" y="920" dominant-baseline="middle" text-anchor="middle" font-family="serif" font-size="42" fill="#3b352f">Maison Sac</text>
+</svg>
