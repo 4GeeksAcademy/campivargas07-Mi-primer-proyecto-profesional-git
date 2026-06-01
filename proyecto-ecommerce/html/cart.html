@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carrito Maison Varga | Resumen de compra</title>
+    <meta
+      name="description"
+      content="Revisa tu carrito Maison Varga: productos seleccionados, cantidad, subtotal, impuestos y total antes de proceder al checkout."
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="../css/tailwind.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ink: '#1d1916',
+              champagne: '#e8dac3',
+              linen: '#f7f3ec',
+              sand: '#d4c2a8',
+              graphite: '#3b352f'
+            }
+          }
+        }
+      };
+    </script>
+  </head>
+  <body class="text-ink">
+    <a href="#contenido" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:rounded focus:bg-graphite focus:px-4 focus:py-2 focus:text-white">Saltar al contenido</a>
+
+    <header class="border-b border-stone-300/60 bg-linen/90 backdrop-blur">
+      <div class="mx-auto flex w-full max-w-7xl items-center justify-between gap-3 px-4 py-4 sm:px-6 lg:px-8">
+        <a href="home.html" class="brand-serif text-3xl font-semibold tracking-wide">Maison Varga</a>
+        <form action="catalog.html" class="hidden flex-1 md:flex" role="search">
+          <label for="busqueda" class="sr-only">Buscar productos</label>
+          <input
+            id="busqueda"
+            name="q"
+            type="search"
+            placeholder="Buscar blazer, camisa, accesorios..."
+            class="w-full rounded-full border border-stone-300 bg-white px-5 py-2.5 text-sm placeholder:text-stone-500 focus-ring"
+          />
+        </form>
+        <nav aria-label="Cuenta de usuario" class="flex items-center gap-2 text-sm sm:gap-4">
+          <a href="checkout.html" class="rounded-full px-3 py-2 hover:bg-stone-200">Mi cuenta</a>
+          <a href="cart.html" class="rounded-full bg-graphite px-4 py-2 font-medium text-white hover:bg-black">Carrito</a>
+        </nav>
+      </div>
+      <nav aria-label="Menu principal" class="border-t border-stone-300/60">
+        <ul class="mx-auto flex w-full max-w-7xl flex-wrap items-center gap-x-6 gap-y-2 px-4 py-3 text-sm uppercase tracking-[0.16em] sm:px-6 lg:px-8">
+          <li><a href="catalog.html?category=calzado" class="hover:text-graphite">Calzado</a></li>
+          <li><a href="catalog.html?category=camisas" class="hover:text-graphite">Camisas</a></li>
+          <li><a href="catalog.html?category=pantalones" class="hover:text-graphite">Pantalones</a></li>
+          <li><a href="catalog.html?category=accesorios" class="hover:text-graphite">Accesorios</a></li>
+          <li><a href="catalog.html" class="hover:text-graphite">Catalogo</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="contenido" class="mx-auto w-full max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+      <h1 class="text-5xl">Carrito de compra</h1>
+      <p class="mt-2 text-stone-700">Vista completa del pedido con cantidad editable y totalizacion automatica.</p>
+
+      <div class="mt-8 grid gap-6 lg:grid-cols-12">
+        <section class="lg:col-span-8">
+          <ul id="cartList" class="space-y-4"></ul>
+        </section>
+
+        <aside class="rounded-3xl border border-stone-300 bg-white/85 p-5 lg:col-span-4">
+          <h2 class="text-3xl">Resumen</h2>
+          <dl class="mt-4 space-y-3 text-sm">
+            <div class="flex items-center justify-between">
+              <dt>Subtotal</dt>
+              <dd id="subtotal">EUR 0.00</dd>
+            </div>
+            <div class="flex items-center justify-between">
+              <dt>Impuestos (20%)</dt>
+              <dd id="tax">EUR 0.00</dd>
+            </div>
+            <div class="flex items-center justify-between border-t border-stone-300 pt-3 text-base font-semibold">
+              <dt>Total</dt>
+              <dd id="total">EUR 0.00</dd>
+            </div>
+          </dl>
+          <a href="checkout.html" class="mt-6 block rounded-full bg-ink px-5 py-3 text-center text-sm font-semibold uppercase tracking-[0.14em] text-white hover:bg-black">Comprar</a>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="border-t border-stone-300 bg-white/75">
+      <div class="mx-auto grid w-full max-w-7xl gap-8 px-4 py-10 sm:grid-cols-2 sm:px-6 lg:grid-cols-4 lg:px-8">
+        <section>
+          <h2 class="text-lg font-semibold">Categorias</h2>
+          <ul class="mt-3 space-y-2 text-sm text-stone-700">
+            <li><a href="catalog.html?category=calzado" class="hover:text-black">Calzado</a></li>
+            <li><a href="catalog.html?category=camisas" class="hover:text-black">Camisas</a></li>
+            <li><a href="catalog.html?category=pantalones" class="hover:text-black">Pantalones</a></li>
+            <li><a href="catalog.html?category=accesorios" class="hover:text-black">Accesorios</a></li>
+          </ul>
+        </section>
+        <section>
+          <h2 class="text-lg font-semibold">Legal</h2>
+          <ul class="mt-3 space-y-2 text-sm text-stone-700">
+            <li><a href="#" class="hover:text-black">Terminos y condiciones</a></li>
+            <li><a href="#" class="hover:text-black">Politica de privacidad</a></li>
+            <li><a href="#" class="hover:text-black">Sobre la marca</a></li>
+          </ul>
+        </section>
+        <section>
+          <h2 class="text-lg font-semibold">Contacto</h2>
+          <ul class="mt-3 space-y-2 text-sm text-stone-700">
+            <li>Maison Varga Paris</li>
+            <li>+33 1 45 00 18 30</li>
+            <li>concierge@maisonvarga.fr</li>
+          </ul>
+        </section>
+        <section>
+          <h2 class="text-lg font-semibold">Navegacion</h2>
+          <ul class="mt-3 space-y-2 text-sm text-stone-700">
+            <li><a href="home.html" class="hover:text-black">Home</a></li>
+            <li><a href="catalog.html" class="hover:text-black">Catalogo</a></li>
+            <li><a href="cart.html" class="hover:text-black">Carrito</a></li>
+            <li><a href="checkout.html" class="hover:text-black">Checkout</a></li>
+          </ul>
+        </section>
+      </div>
+      <p class="border-t border-stone-300 px-4 py-4 text-center text-xs uppercase tracking-[0.14em] text-stone-600 sm:px-6 lg:px-8">
+        2026 Maison Varga. Todos los derechos reservados.
+      </p>
+    </footer>
+
+    <script>
+      const fallbackProducts = [
+        { id: 'MV-BL-001', name: 'Blazer Marfil Riviera', price: 460, image: '../img/product-01.svg', size: 'M', quantity: 1 },
+        { id: 'MV-CL-055', name: 'Derby Heritage Noir', price: 570, image: '../img/product-04.svg', size: '42', quantity: 1 },
+        { id: 'MV-AC-032', name: 'Bolso Maison Sac 32', price: 610, image: '../img/product-05.svg', size: 'L', quantity: 1 }
+      ];
+
+      const cartList = document.getElementById('cartList');
+      const subtotalEl = document.getElementById('subtotal');
+      const taxEl = document.getElementById('tax');
+      const totalEl = document.getElementById('total');
+
+      function getCart() {
+        const stored = JSON.parse(localStorage.getItem('luxuryCart') || '[]');
+        if (stored.length) return stored;
+        localStorage.setItem('luxuryCart', JSON.stringify(fallbackProducts));
+        return fallbackProducts;
+      }
+
+      function renderCart() {
+        const cart = getCart();
+        cartList.innerHTML = '';
+
+        if (!cart.length) {
+          cartList.innerHTML = '<li class="rounded-2xl border border-stone-300 bg-white/85 p-5">Tu carrito esta vacio.</li>';
+          subtotalEl.textContent = 'EUR 0.00';
+          taxEl.textContent = 'EUR 0.00';
+          totalEl.textContent = 'EUR 0.00';
+          return;
+        }
+
+        let subtotal = 0;
+
+        cart.forEach((item, index) => {
+          const lineTotal = item.price * item.quantity;
+          subtotal += lineTotal;
+
+          const li = document.createElement('li');
+          li.className = 'rounded-2xl border border-stone-300 bg-white/85 p-4';
+          li.innerHTML = `
+            <article class="grid gap-4 sm:grid-cols-[7rem_1fr_auto] sm:items-center">
+              <img src="${item.image}" alt="${item.name}" class="h-28 w-28 rounded-xl object-cover" />
+              <div>
+                <h2 class="text-lg font-semibold">${item.name}</h2>
+                <p class="text-sm text-stone-700">Precio unitario: EUR ${item.price.toFixed(2)}</p>
+                <p class="text-sm text-stone-700">Talla: ${item.size}</p>
+                <label class="mt-2 block text-sm">
+                  Cantidad
+                  <input type="number" min="1" value="${item.quantity}" data-index="${index}" class="mt-1 w-24 rounded-lg border border-stone-300 px-3 py-1.5 focus-ring" />
+                </label>
+              </div>
+              <p class="text-base font-semibold">EUR ${lineTotal.toFixed(2)}</p>
+            </article>
+          `;
+          cartList.appendChild(li);
+        });
+
+        const tax = subtotal * 0.2;
+        const total = subtotal + tax;
+
+        subtotalEl.textContent = `EUR ${subtotal.toFixed(2)}`;
+        taxEl.textContent = `EUR ${tax.toFixed(2)}`;
+        totalEl.textContent = `EUR ${total.toFixed(2)}`;
+
+        cartList.querySelectorAll('input[type="number"]').forEach((input) => {
+          input.addEventListener('change', (event) => {
+            const idx = Number(event.target.dataset.index);
+            const next = Math.max(1, Number(event.target.value || 1));
+            cart[idx].quantity = next;
+            localStorage.setItem('luxuryCart', JSON.stringify(cart));
+            renderCart();
+          });
+        });
+      }
+
+      renderCart();
+    </script>
+  </body>
+</html>
