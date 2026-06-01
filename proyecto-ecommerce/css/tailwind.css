@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap');
+
+:root {
+  --ink: #1d1916;
+  --champagne: #e8dac3;
+  --linen: #f7f3ec;
+  --sand: #d4c2a8;
+  --graphite: #3b352f;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  color: var(--ink);
+  background: radial-gradient(circle at top right, rgba(232, 218, 195, 0.45), transparent 42%), linear-gradient(180deg, #fcfbf9 0%, #f3ede3 100%);
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+.brand-serif {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.pattern-soft {
+  background-image: linear-gradient(135deg, rgba(212, 194, 168, 0.22) 25%, transparent 25%), linear-gradient(225deg, rgba(212, 194, 168, 0.22) 25%, transparent 25%), linear-gradient(45deg, rgba(212, 194, 168, 0.22) 25%, transparent 25%), linear-gradient(315deg, rgba(212, 194, 168, 0.22) 25%, transparent 25%);
+  background-position: 12px 0, 12px 0, 0 0, 0 0;
+  background-size: 24px 24px;
+  background-repeat: repeat;
+}
+
+.focus-ring {
+  outline: none;
+  box-shadow: 0 0 0 2px #fcfbf9, 0 0 0 4px var(--graphite);
+}

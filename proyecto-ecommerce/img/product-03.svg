@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000" role="img" aria-label="Pantalon de lana">
+  <defs>
+    <linearGradient id="g3" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ddd0bc"/>
+      <stop offset="1" stop-color="#b8a487"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#g3)"/>
+  <path d="M290 180 H510 L470 820 H390 L400 540 L410 820 H330 Z" fill="#f7f1e8" stroke="#6f6557" stroke-width="6"/>
+  <line x1="400" y1="180" x2="400" y2="820" stroke="#6f6557" stroke-width="6"/>
+  <text x="50%" y="920" dominant-baseline="middle" text-anchor="middle" font-family="serif" font-size="42" fill="#3b352f">Atelier 24</text>
+</svg>
